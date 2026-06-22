@@ -1,0 +1,81 @@
+/* Design tokens — change a value here, the whole site updates. */
+:root {
+  --ink: #1a1a1a;
+  --cream: #fdf2e9;
+  --yellow: #ffe66d;
+  --coral: #ff6b6b;
+  --teal: #4ecdc4;
+  --purple: #a388ee;
+  --blue: #45b7d1;
+  --orange: #f7a072;
+
+  /* darkened from the original mockup greys to hit WCAG AA on cream */
+  --text-muted: #595959;
+
+  --border: 2px solid var(--ink);
+  --border-thick: 3px solid var(--ink);
+  --radius: 10px;
+  --radius-pill: 999px;
+  --shadow: 4px 4px 0 var(--ink);
+  --shadow-lg: 6px 6px 0 var(--ink);
+  --shadow-xl: 8px 8px 0 var(--ink);
+  --focus: 3px solid var(--blue);
+
+  --font: 'Space Grotesk', system-ui, sans-serif;
+}
+
+[data-theme='dark'] {
+  --cream: #161616;
+  --ink: #f5f5f5;
+  --text-muted: #b3b3b3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font);
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--yellow);
+  color: var(--ink);
+  padding: 10px 18px;
+  border: var(--border);
+  border-radius: var(--radius);
+  z-index: 1000;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+}
