@@ -22,6 +22,16 @@
   --focus: 3px solid var(--blue);
 
   --font: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+  --font-display: 'Archivo Black', system-ui, sans-serif;
+
+  --window-chrome: #d9d4cb;
+}
+
+@keyframes hub-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 [data-theme='dark'] {
